@@ -15,7 +15,7 @@ services:
       MYSQL_USER: ${DB_USER:-loop}
       MYSQL_PASSWORD: ${DB_PASSWORD}
     volumes:
-      - mysql_data:/var/lib/mysql
+      - ${MYSQL_DATA_HOST_PATH:-/srv/mysql}:/var/lib/mysql
     healthcheck:
       test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$$MYSQL_ROOT_PASSWORD || exit 1"]
       interval: 5s
@@ -164,4 +164,3 @@ volumes:
   redis_data:
   caddy_data:
   caddy_config:
-  mysql_data:
