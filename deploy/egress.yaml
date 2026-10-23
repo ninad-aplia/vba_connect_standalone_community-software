@@ -1,0 +1,10 @@
+log_level: info
+
+api_key: devkey
+api_secret: "myverylongsecretkey12345678901234567890"
+
+ws_url: ws://livekit:7880
+insecure: true
+
+redis:
+  address: redis:6379

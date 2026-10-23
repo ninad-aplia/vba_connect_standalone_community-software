@@ -1,0 +1,15 @@
+{$LOOP_DOMAIN} {
+    reverse_proxy web:80
+}
+
+{$MEETNOTE_DOMAIN} {
+    reverse_proxy meetnote-web:80
+}
+
+{$MEETNOTE_API_DOMAIN} {
+    reverse_proxy meetnote-backend:8000
+}
+
+{$LIVEKIT_DOMAIN} {
+    reverse_proxy livekit:7880
+}
